@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
-import logo from './logo.svg';
+import Rank from './Components/Rank/Rank';
+import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import './App.css';
+import Particles from 'react-particles-js';
 
-function App() {
-  return (
-    <div className="App">
-      <Navigation />
-      <Logo />
-      {/* <ImageLinkForm />
-    <FaceRecognition /> */}
-    </div>
-  );
-}
+const particleOptions = {
+  particles: {
+    number: {
+      value: 30,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+
+  class App extends React.Component {
+    render() {
+      return (
+        <div className="App">
+          <Particles className='particles'
+            params={particlesOptions}
+          />
+          <Navigation />
+          <Logo />
+          <Rank />
+          <ImageLinkForm />
+          {/* <FaceRecognition /> */}
+        </div>
+      );
+    }
+  }
 
 export default App;
