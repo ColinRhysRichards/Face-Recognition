@@ -54,6 +54,6 @@ class Register extends React.Component {
         )
     }
 }
-//yes sir
+
 
 export default Register;
