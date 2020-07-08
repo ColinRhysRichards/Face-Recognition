@@ -54,6 +54,6 @@ class Register extends React.Component {
         )
     }
 }
-
+//finsihing touches on app
 
 export default Register;
